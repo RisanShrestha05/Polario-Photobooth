@@ -1,0 +1,3 @@
+.box { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; background: #2a0a12; color: #fff; font-family: var(--font-ui); }
+.box h2 { font: 700 20px var(--font-display); }
+.box p { max-width: 34ch; line-height: 1.5; opacity: 0.85; }

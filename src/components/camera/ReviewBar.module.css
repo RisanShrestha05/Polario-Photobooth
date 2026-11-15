@@ -1,0 +1,4 @@
+.bar { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.bar p { font: 500 14px/1.4 var(--font-ui); color: var(--ink-soft); max-width: 30ch; }
+@media (max-height: 780px) { .bar p { display: none; } }
+@media (max-width: 900px) { .bar { width: 100%; flex-direction: row; justify-content: space-between; text-align: left; } .bar p { display: block; max-width: none; } }

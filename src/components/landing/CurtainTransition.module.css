@@ -1,0 +1,18 @@
+.overlay { position: fixed; inset: 0; z-index: 4000; overflow: hidden; }
+.opening { pointer-events: none; }
+.panel {
+  position: absolute; top: 0; bottom: 0; width: 50.5%;
+  background: repeating-linear-gradient(90deg, #8a1a2e 0 16px, #6e1324 16px 34px);
+}
+.left { left: 0; border-right: 4px solid #e3a83b; box-shadow: inset -14px 0 22px rgba(0, 0, 0, 0.4); }
+.right { right: 0; border-left: 4px solid #e3a83b; box-shadow: inset 14px 0 22px rgba(0, 0, 0, 0.4); }
+
+.closing .left { animation: inLeft 1100ms cubic-bezier(0.6, 0, 0.3, 1) both; }
+.closing .right { animation: inRight 1100ms cubic-bezier(0.6, 0, 0.3, 1) both; }
+.opening .left { animation: outLeft 900ms cubic-bezier(0.5, 0, 0.2, 1) both; }
+.opening .right { animation: outRight 900ms cubic-bezier(0.5, 0, 0.2, 1) both; }
+
+@keyframes inLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes inRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes outLeft { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+@keyframes outRight { from { transform: translateX(0); } to { transform: translateX(100%); } }

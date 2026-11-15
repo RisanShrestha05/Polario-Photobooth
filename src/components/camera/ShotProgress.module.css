@@ -1,0 +1,14 @@
+.grid { display: grid; gap: 8px; margin: 0 auto; width: min(100%, calc(var(--cols) * var(--cell, 60px) + (var(--cols) - 1) * 8px)); }
+.cell { position: relative; aspect-ratio: 1 / 1; border-radius: var(--radius-sm); overflow: hidden; border: 3px solid #fff; background: rgba(255, 255, 255, 0.5); padding: 0; box-shadow: var(--shadow-sm); }
+button.cell { cursor: pointer; }
+.cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.empty { display: grid; place-items: center; font: 700 18px var(--font-ui); color: rgba(107, 20, 40, 0.55); border-style: dashed; border-color: rgba(107, 20, 40, 0.35); }
+.active { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.retake { position: absolute; inset: auto 0 0 0; padding: 4px 0; background: rgba(107, 20, 40, 0.85); color: #fff; font: 700 12px var(--font-ui); opacity: 0; transition: opacity 0.2s ease; }
+button.cell:hover .retake, button.cell:focus-visible .retake { opacity: 1; }
+
+/* Tablet and phones: thumbnails become one swipeable row */
+@media (max-width: 900px) {
+  .grid { display: flex !important; width: 100% !important; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+  .cell { flex: 0 0 var(--cell, 56px); }
+}

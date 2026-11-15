@@ -1,0 +1,8 @@
+.btn { position: relative; width: 84px; height: 84px; border-radius: 50%; border: none; background: #fff; box-shadow: var(--shadow-lg); cursor: pointer; display: grid; place-items: center; transition: transform 0.2s ease; }
+.ring { position: absolute; width: 72px; height: 72px; border-radius: 50%; border: 4px solid var(--accent); transition: border-width 0.2s ease; }
+.inner { width: 52px; height: 52px; border-radius: 50%; background: var(--accent); transition: transform 0.2s ease; }
+.btn:hover:not(:disabled) { transform: scale(1.08); }
+.btn:hover:not(:disabled) .ring { border-width: 6px; }
+.btn:active:not(:disabled) { transform: scale(0.95); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+@media (max-width: 700px) { .btn { width: 76px; height: 76px; } .ring { width: 64px; height: 64px; } .inner { width: 46px; height: 46px; } }

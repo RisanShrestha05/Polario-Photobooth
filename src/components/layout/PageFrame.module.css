@@ -1,0 +1,10 @@
+.page {
+  height: 100dvh; display: flex; flex-direction: column; align-items: center; gap: clamp(10px, 2vh, 24px); overflow: hidden;
+  padding: calc(clamp(12px, 3vh, 28px) + var(--safe-top)) clamp(16px, 4vw, 48px) 0;
+}
+.title { font-size: clamp(24px, 5vh, 40px); line-height: 1.1; color: var(--ink); text-align: center; flex: none; }
+.content { flex: 1; min-height: 0; width: 100%; max-width: 1080px; display: flex; justify-content: center; }
+.navWrap { flex: none; width: 100%; max-width: 1080px; padding: 4px 0 calc(clamp(10px, 2.4vh, 24px) + var(--safe-bottom)); }
+
+/* Very short windows (phone on its side): allow scrolling as a last resort */
+@media (max-height: 520px) { .page { height: auto; min-height: 100dvh; overflow: auto; } }

@@ -1,0 +1,13 @@
+.wrap { display: flex; flex-direction: column; gap: 10px; }
+.head { display: flex; justify-content: space-between; align-items: baseline; }
+.label { font: 700 15px var(--font-ui); color: var(--primary); }
+.name { font: 500 13px var(--font-ui); color: var(--ink-soft); }
+.grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.swatch { width: 36px; height: 36px; border-radius: 50%; border: 2px solid rgba(0, 0, 0, 0.18); display: grid; place-items: center; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.swatch:hover { transform: scale(1.12); }
+.active { box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--primary); }
+.low { border-style: dashed; opacity: 0.55; }
+@media (pointer: coarse) { .swatch { width: 44px; height: 44px; } .grid { gap: 12px; } }
+
+/* Phones: one swipeable row per palette keeps the screen short */
+@media (max-width: 700px) { .grid { flex-wrap: nowrap; overflow-x: auto; padding: 4px 4px 6px; -webkit-overflow-scrolling: touch; } .swatch { flex: none; } }

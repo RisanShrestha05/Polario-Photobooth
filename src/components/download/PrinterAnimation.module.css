@@ -1,0 +1,16 @@
+.overlay { position: fixed; inset: 0; z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; padding: 20px; background: rgba(42, 6, 16, 0.88); backdrop-filter: blur(8px); animation: fade 0.3s ease both; }
+.stage { position: relative; animation: slideDown var(--in-ms) cubic-bezier(0.22, 1, 0.36, 1) both; }
+.machine { position: absolute; top: 0; left: 0; display: block; filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.4)); }
+.mask { position: absolute; overflow: hidden; z-index: 2; }
+.strip { display: block; width: 100%; height: 100%; box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35); }
+.machineIn { transform: translateY(-100%); }
+.printing { animation: eject var(--print-ms) steps(var(--steps), end) both; }
+.done { transform: translateY(0); }
+.bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; min-height: 48px; align-items: center; }
+.status { color: #fff; font: 600 16px var(--font-ui); }
+.light { color: #fff; }
+.light:hover:not(:disabled) { background: rgba(255, 255, 255, 0.15); }
+@keyframes eject { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-48px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 600px) { .bar { width: 100%; flex-direction: column; } .bar > button { width: 100%; max-width: 360px; } .overlay { padding: calc(16px + var(--safe-top)) 16px calc(16px + var(--safe-bottom)); } }

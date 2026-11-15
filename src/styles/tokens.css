@@ -1,0 +1,35 @@
+:root {
+  /* Booth screens: "Warm film" workspace */
+  --bg: #f3e3c3;
+  --ink: #2b1a12;
+  --ink-soft: #5a4636;
+  --primary: #6b1428; /* burgundy: buttons, selection */
+  --primary-hover: #4a0d1b;
+  --accent: #6b1428;
+  --accent-hover: #4a0d1b;
+  --accent-soft: #ebcfd3;
+  --brass: #e3a83b; /* small highlights only */
+  --brass-ink: #2a0a12;
+  --card: #fbf3e2;
+  --paper: #f8f4ec;
+  --surface: rgba(255, 255, 255, 0.55);
+  --ok: #10b981;
+  --danger: #ef4444;
+
+  /* shape */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 2px 8px rgba(60, 30, 10, 0.12);
+  --shadow-md: 0 6px 18px rgba(60, 30, 10, 0.16);
+  --shadow-lg: 0 10px 24px rgba(60, 30, 10, 0.22);
+
+  /* type */
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-ui: 'Avenir Next', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* safe areas (phones with notches / home bars) */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}

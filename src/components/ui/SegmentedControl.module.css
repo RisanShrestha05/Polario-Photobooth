@@ -1,0 +1,24 @@
+.group {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+.seg {
+  min-width: 48px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--ink);
+  font: 700 15px/1 var(--font-ui);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.seg:hover:not(:disabled):not(.active) { background: var(--accent-soft); color: var(--primary); }
+.seg.active { background: var(--primary); color: #fff; }
+.seg:disabled { opacity: 0.35; cursor: not-allowed; }
+@media (pointer: coarse) { .seg { min-height: 44px; } }
+@media (max-width: 480px) { .group { max-width: 100%; } .seg { min-width: 40px; padding-inline: 12px; } }

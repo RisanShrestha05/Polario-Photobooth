@@ -1,0 +1,5 @@
+.wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.label { display: inline-flex; align-items: center; gap: 6px; font: 700 15px var(--font-ui); color: var(--primary); }
+.note { font: 500 13px/1.4 var(--font-ui); color: var(--ink-soft); text-align: center; }
+@media (max-width: 700px) { .wrap { width: 100%; } }
+@media (max-height: 780px), (max-width: 900px) { .note { display: none; } }
